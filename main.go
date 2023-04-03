@@ -1,6 +1,9 @@
 package main
 
-import "golang/structs"
+import (
+	"fmt"
+	"golang/channels"
+)
 
 func main() {
 	//variables.Demo1()
@@ -35,5 +38,17 @@ func main() {
 	// pointers.Demo2(sayilar)
 	// fmt.Println("Mainde ki sayilar :", sayilar[0])
 
-	structs.Demo2()
+	//structs.Demo2()
+	// go goroutines.CiftSayilar()
+	// go goroutines.TekSayilar()
+
+	ciftSayiCn := make(chan int)
+	tekSayiCn := make(chan int)
+	go channels.CiftSayilar(ciftSayiCn)
+	go channels.TekSayilar(tekSayiCn)
+
+	ciftSayiToplam, tekSayiToplam := <-ciftSayiCn, <-tekSayiCn
+
+	carpim := ciftSayiToplam * tekSayiToplam
+	fmt.Println("Çarpım : ", carpim)
 }
