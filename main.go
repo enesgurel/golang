@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"golang/channels"
-)
+import "golang/interfaces"
 
 func main() {
 	//variables.Demo1()
@@ -42,13 +39,15 @@ func main() {
 	// go goroutines.CiftSayilar()
 	// go goroutines.TekSayilar()
 
-	ciftSayiCn := make(chan int)
-	tekSayiCn := make(chan int)
-	go channels.CiftSayilar(ciftSayiCn)
-	go channels.TekSayilar(tekSayiCn)
+	// ciftSayiCn := make(chan int)
+	// tekSayiCn := make(chan int)
+	// go channels.CiftSayilar(ciftSayiCn)
+	// go channels.TekSayilar(tekSayiCn)
 
-	ciftSayiToplam, tekSayiToplam := <-ciftSayiCn, <-tekSayiCn
+	// ciftSayiToplam, tekSayiToplam := <-ciftSayiCn, <-tekSayiCn
 
-	carpim := ciftSayiToplam * tekSayiToplam
-	fmt.Println("Çarpım : ", carpim)
+	// carpim := ciftSayiToplam * tekSayiToplam
+	// fmt.Println("Çarpım : ", carpim)
+
+	interfaces.Demo2()
 }
