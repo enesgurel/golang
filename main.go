@@ -1,6 +1,6 @@
 package main
 
-import "golang/string_functions"
+import "golang/restful"
 
 func main() {
 	//variables.Demo1()
@@ -55,5 +55,7 @@ func main() {
 
 	//fmt.Println(error_handling.TahminEt2(101))
 
-	string_functions.Demo2()
+	//string_functions.Demo2()
+
+	restful.Demo2()
 }
