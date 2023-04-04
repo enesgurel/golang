@@ -1,6 +1,6 @@
 package main
 
-import "golang/interfaces"
+import "golang/error_handling"
 
 func main() {
 	//variables.Demo1()
@@ -49,5 +49,6 @@ func main() {
 	// carpim := ciftSayiToplam * tekSayiToplam
 	// fmt.Println("Çarpım : ", carpim)
 
-	interfaces.Demo2()
+	//interfaces.Demo2()
+	error_handling.Demo1()
 }
