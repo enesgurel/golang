@@ -10,9 +10,12 @@ func Demo1() {
 	//nil
 	if err != nil {
 		if pErr, ok := err.(*os.PathError); ok {
-			fmt.Print(pErr)
+			fmt.Print("Dosya bulunamadi : ", pErr.Path)
+			return
+		} else {
+			fmt.Println("Dosya bulunamadi")
+			return
 		}
-		fmt.Println("Dosya bulunamadi")
 	} else {
 		fmt.Println(f.Name())
 	}

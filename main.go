@@ -1,6 +1,6 @@
 package main
 
-import "golang/error_handling"
+import "golang/string_functions"
 
 func main() {
 	//variables.Demo1()
@@ -50,5 +50,10 @@ func main() {
 	// fmt.Println("Çarpım : ", carpim)
 
 	//interfaces.Demo2()
-	error_handling.Demo1()
+	//error_handling.Demo1()
+	//interfaces.Demo3()
+
+	//fmt.Println(error_handling.TahminEt2(101))
+
+	string_functions.Demo2()
 }
