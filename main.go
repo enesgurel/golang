@@ -1,6 +1,6 @@
 package main
 
-import "golang/restful"
+import "golang/project"
 
 func main() {
 	//variables.Demo1()
@@ -57,5 +57,7 @@ func main() {
 
 	//string_functions.Demo2()
 
-	restful.Demo2()
+	//restful.Demo2()
+
+	project.GetAllProducts()
 }
