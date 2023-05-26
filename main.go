@@ -1,6 +1,9 @@
 package main
 
-import "golang/project"
+import (
+	"fmt"
+	"golang/project"
+)
 
 func main() {
 	//variables.Demo1()
@@ -61,6 +64,12 @@ func main() {
 
 	//project.GetAllProducts()
 
-	project.AddProduct()
-	project.GetAllProducts()
+	product, _ := project.AddProduct()
+	fmt.Println(product)
+
+	products, _ := project.GetAllProducts()
+
+	for i := 0; i < len(products); i++ {
+		fmt.Println(products[i].ProductName)
+	}
 }
