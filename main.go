@@ -59,5 +59,8 @@ func main() {
 
 	//restful.Demo2()
 
+	//project.GetAllProducts()
+
+	project.AddProduct()
 	project.GetAllProducts()
 }
